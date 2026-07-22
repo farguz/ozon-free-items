@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# playwright
+playwright_user_profile/
+
+# vscode temp
+.vscode/
