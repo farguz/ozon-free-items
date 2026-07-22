@@ -1,0 +1,66 @@
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+    "*/migrations/*",
+    "migrations",
+    "manage.py",
+    "settings.py",
+    "*/manage.py",
+    "*/settings.py",
+]
+
+line-length = 120
+indent-width = 4
+
+target-version = "py312"
+
+[lint]
+preview = true
+select = [
+    "E2", "E3", "E4", "E70", "E71", "E73",
+    "F401", "F5", "F6", "F9",
+    "I",
+    "LOG",
+    "W",
+    ]
+ignore = ["E712", "E402"]
+
+[lint.per-file-ignores]
+# init modules can contain the local imports, logic, unused imports
+"__init__.py" = ["F401"]
+
+[lint.isort]
+section-order = ["future", "standard-library", "third-party", "django", "first-party", "local-folder"]
+
+[lint.isort.sections]
+"django" = ["django"]
+
+[format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
