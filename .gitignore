@@ -222,3 +222,6 @@ playwright_user_profile/
 
 # vscode temp
 .vscode/
+
+# htmls
+*.html
