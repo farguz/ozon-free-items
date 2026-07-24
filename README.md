@@ -1,2 +1,1 @@
-# ozon-free-items
-desc placeholder
+# Simple app which tracks items from russian online marketplace Ozon
