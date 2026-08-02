@@ -5,7 +5,7 @@ from .models import Category, NotificationHistory, ParseLog, PriceHistory, Produ
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'slug', 'url', 'is_active', 'last_parsed_at', 'created_at', 'last_seen_at')
+    list_display = ('name', 'slug', 'url', 'is_active', 'last_parsed_at', 'created_at')
     list_filter = ('is_active',)
     search_fields = ('name', 'url')
     prepopulated_fields = {'slug': ('name',)}
