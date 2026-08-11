@@ -63,7 +63,7 @@ def fetch_page_html(
         logger.info(f'HTML fetched successfully {url}')
         return page.html
     except Exception as e:
-        logger.info(f'Error during fetching {url}. Exception {e}')
-        pass
+        logger.error(f'Error during fetching {url}. Exception {e}')
+        raise
     finally:
         page.quit()
